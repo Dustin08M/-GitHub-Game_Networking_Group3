@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Login Scene.unity
-    guid: 300e1f0051290bd4d97070398318e869
+    path: Assets/Scenes/Group3_Activity/Loading.unity
+    guid: d7feedafbe20fdf44a5d4105224412bc
   - enabled: 1
-    path: Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scenes/PunBasics-Launcher.unity
-    guid: bff77b01b50254edbb6edeeaba5ae8b3
+    path: Assets/Scenes/Group3_Activity/LoginScene.unity
+    guid: d690dd28628875043b23d719a8e7c3b2
+  - enabled: 1
+    path: Assets/Scenes/Group3_Activity/MenuScene.unity
+    guid: 7f9d7e395ff1fcf479c8d45431025f13
   - enabled: 1
     path: Assets/Scenes/Gameplay.unity
     guid: ff4ee3ba60144a342aca0c79c93c7a87
