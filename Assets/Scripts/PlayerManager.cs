@@ -7,12 +7,13 @@ using TMPro;
 
 public class PlayerManager : MonoBehaviour
 {
-    [SerializeField] private Transform _spawnLocation;
+    [SerializeField] public static Transform _spawnLocation;
+    [SerializeField] private  Transform _spawnLocation_thisScene;
 
-    [SerializeField] private static GameObject localPlayer;
+    [SerializeField] private GameObject localPlayer;
     // Start is called before the first frame update
     void Start()
     {
-        PhotonNetwork.Instantiate("Characters/Player", _spawnLocation.position, Quaternion.identity);
+        PhotonNetwork.Instantiate("Characters/Player", _spawnLocation_thisScene.position, Quaternion.identity);
     }
 }

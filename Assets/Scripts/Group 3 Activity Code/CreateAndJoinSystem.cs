@@ -12,7 +12,7 @@ public class CreateAndJoinSystem : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        PhotonNetwork.ConnectUsingSettings();
+        //PhotonNetwork.ConnectUsingSettings();
     }
 
     public void CreateRoom()
@@ -20,7 +20,7 @@ public class CreateAndJoinSystem : MonoBehaviourPunCallbacks
         if (CreateRoomCode != null)
         {
             Debug.Log($"CREATING ROOM: {CreateRoomCode.text}");
-            //PhotonNetwork.ConnectUsingSettings();
+            PhotonNetwork.ConnectUsingSettings();
             Invoke("LoadCreateRoom", 5f);
         }
         if (string.IsNullOrEmpty(CreateRoomCode.text))
@@ -36,7 +36,7 @@ public class CreateAndJoinSystem : MonoBehaviourPunCallbacks
         if (JoinRoomCode != null)
         {
             Debug.Log($"JOINING ROOM: {JoinRoomCode.text}");
-            //PhotonNetwork.ConnectUsingSettings();
+            PhotonNetwork.ConnectUsingSettings();
             Invoke("LoadJoinRoom", 5f);
         }
         if (string.IsNullOrEmpty(JoinRoomCode.text))
@@ -47,8 +47,7 @@ public class CreateAndJoinSystem : MonoBehaviourPunCallbacks
     }
     public override void OnJoinedRoom()
     {
-        //PhotonNetwork.Instantiate("Characters/Player", PlayerManager._spawnLocation.position, Quaternion.identity);
-        //PhotonNetwork.LoadLevel("Gameplay");
+        PhotonNetwork.LoadLevel("Gameplay");
     }
     public override void OnConnectedToMaster()
     {
